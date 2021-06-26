@@ -15,7 +15,7 @@ const LinkForm = ({ refreshLinks }) => {
     e.preventDefault()
     const body = { name, url, description }
     try {
-      const res = await fetch("/api/createLinks", {
+      await fetch("/api/createLinks", {
         method: "POST",
         body: JSON.stringify(body),
       })

@@ -10,7 +10,11 @@ const LinkList = ({ links, refreshLinks }) => {
           .filter((link) => !link.archived)
           .map((link) => {
             return (
-              <LinkCard key={link.id} link={link} refreshLinks={refreshLinks} />
+              <LinkCard
+                key={link._id}
+                link={link}
+                refreshLinks={refreshLinks}
+              />
             )
           })}
 
@@ -20,7 +24,11 @@ const LinkList = ({ links, refreshLinks }) => {
           .filter((link) => link.archived)
           .map((link) => {
             return (
-              <LinkCard key={link.id} link={link} refreshLinks={refreshLinks} />
+              <LinkCard
+                key={link._id}
+                link={link}
+                refreshLinks={refreshLinks}
+              />
             )
           })}
     </div>
