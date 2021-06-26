@@ -15,7 +15,7 @@ const LinkForm = ({ refreshLinks }) => {
     e.preventDefault()
     const body = { name, url, description }
     try {
-      await fetch("/api/createLinks", {
+      await fetch("/.netlify/functions/createLinks", {
         method: "POST",
         body: JSON.stringify(body),
       })
